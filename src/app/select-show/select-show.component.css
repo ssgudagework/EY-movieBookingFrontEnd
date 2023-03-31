@@ -1,0 +1,17 @@
+.topDivShow{
+    display: flex;
+    justify-content: center;
+}
+.movieOutline{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.timeClass:hover{
+color:blue
+}
+.bottomItems{
+    margin-top: 25px;
+}
+

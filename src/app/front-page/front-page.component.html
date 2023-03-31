@@ -1,0 +1,32 @@
+<!-- <div>
+    <div class="belowHeader" style="display: flex; justify-content: center; align-items: center; margin: 0 auto; width: 35rem">
+        <div class="search" style="margin: 0 auto; width: 30rem" (click)="onSubmit()">
+            <input type="search" style="width: 18rem; margin:1rem 0 1rem 3rem;" [(ngModel)]="selectValueData">
+            <button type="submit"
+                style="width: 6rem; height: 2rem; margin-top: -0.4rem; margin-left: 0.6rem;">
+                <b>search</b>
+            </button>
+        </div>
+        <div>-->
+            <!-- <select name="city" id="city" (change)="selectValue($event)"> -->
+            <!-- <select name="city" id="city">
+                <option value="">Select City</option>
+                <option *ngFor="let city of citiesData.cities" [value]="city.cityName">{{city.cityName}}</option>
+            </select>
+        </div>
+    </div>
+    <app-select-movie [cityRelatedMovieData]="cityRelatedMovieData"></app-select-movie>
+</div>  -->
+
+
+<div style="position: absolute; right: 20px;">
+    <select name="city" id="city" (change)="selectValue($event)" (click)="onSubmit()">
+        <option value="">Select City</option>
+        <option *ngFor="let city of citiesData.cities" [value]="city.cityName">{{city.cityName}}</option>
+    </select>
+</div>
+
+<app-select-movie [cityRelatedMovieData]="cityRelatedMovieData"></app-select-movie>
+
+
+

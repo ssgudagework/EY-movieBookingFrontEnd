@@ -1,0 +1,36 @@
+<div class="topDivShow" style="margin: 70px;">
+    <div    *ngFor="let movie of movies"
+    style="padding: 10px; width: 850px; height: 800px; border: 1px solid gray; margin-bottom: 20px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
+            <img src={{movie.imgUrl}} alt="movie-poster" style="width: 400px; height: 400px;">
+            <div class="movieOutline">
+                <h2>{{movie.name}}</h2>
+                <h4>Imdb Rating : {{movie.imdb}}</h4>
+                <div style="display: flex; gap: 10px;">
+                    <div *ngFor="let genre of movie.genre">
+                        <h5>{{genre.genre}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottomItems" *ngFor="let area of movie.area">
+            <div style="display: flex; gap: 50px;">
+                <h5>{{area.area}}</h5>
+                <h5>Price : {{area.price}}</h5>
+            </div>
+
+            <div style="display: flex; gap: 20px; ">
+                <div *ngFor="let schedule of area.time">
+                    <h6    class="timeClass" style="cursor: pointer; border-color: black 1px;" (click)="handleTime(schedule)">{{schedule.time}}</h6>
+                </div>
+            </div>
+            <button (click)="handleArea(area)" style="margin-bottom: 20px;">Submit</button>
+        </div>
+
+        <div style="width: 60px; margin: 10px auto;">
+            <button (click)="handleMovie(movie)" routerLink="/details">Confirm</button>
+        </div>
+
+    </div>
+</div>
